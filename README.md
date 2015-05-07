@@ -1,16 +1,15 @@
-# Máquina Registradora
+# Register Machine
 
-La meta en este proyecto es que puedas crear un aplicacion que utilice los diccionarios de python, tienes que realizar un programa que permita al gerente de una tienda ingresar n artículos con su respectivo precio a una estructura de datos. 
+The goal of this project is to create an application that utilises the python dictionaries. You have to make a program that allows the manager of a business to store a “n” article with its respective price and data structure.
 
-    Nota: antes de ingresar los artículos a la estructura de datos, 
-    el usuario debe de decir el valor de n.
+    Nota: before storing an article to the data structure, the user should set the value of “n” article.
 
-Despues de que el gerente ingrese los productos el programa debe permitirle al cajero ingresar una serie de artículos por su respectivo nombre. Al finalizar el ingreso de artículos el programa debe de dar el precio total que corresponde a la suma de artículos y sacar el valor del IVA. 
+After the manager stores the product, the program should let the cashier store a series of articles with their respective name. After storing the products the program should give a price that corresponds to the sum of all the articles and it should calculate the IVA. 
 
-Al momento de calcular el total si el cliente del establecimiento tiene tarjeta de `cliente frecuente Gold` se le debe de rebajar un 5% si tiene tarjeta de `cliente frecuente silver` se le debe de rebajar un 2%. **(Simulando una venta)**
+uring the calculation if the customer has a `frequent client Gold card` he should get a 5% discount and if he has a `Silver card` he should get a 2% discount. **(Simulating the sale)**
 
 
-## Conceptos Requeridos
+## Required concepts 
 
       1.  Variables
       2.  Float numbers
@@ -28,4 +27,4 @@ Al momento de calcular el total si el cliente del establecimiento tiene tarjeta 
 
 
 ## Running tests
-Entra en el directorio de tu proyecto y ejecuta `nosetests` en la terminal. El código debería funcionar perfectamente.
+Got to your project directory and execute the `nosetests` on the terminal. The code should work without a problem.
