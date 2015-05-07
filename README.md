@@ -2,7 +2,7 @@
 
 The goal of this project is to create an application that utilises the python dictionaries. You have to make a program that allows the manager of a business to store a “n” article with its respective price and data structure.
 
-    Nota: before storing an article to the data structure, the user should set the value of “n” article.
+    Note: before storing an article to the data structure, the user should set the value of “n” article.
 
 After the manager stores the product, the program should let the cashier store a series of articles with their respective name. After storing the products the program should give a price that corresponds to the sum of all the articles and it should calculate the IVA. 
 
