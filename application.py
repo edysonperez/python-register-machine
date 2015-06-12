@@ -1,24 +1,15 @@
-ENTER = 0
-def	VALUE_CHOISE(ENTER = 0):
-	#print "Estoy en VALUE_CHOISE"
-	NOT_LETTERS = True
-	while NOT_LETTERS == True:
-		ENTER = raw_input("Enter number from 1 to 3 please\n>")
-		if ENTERINT(ENTER) == True:
-			NOT_LETTERS = False
-		else:
-			print "Enter only numbers please"
-			NOT_LETTERS = True
-	CORRECT_NUMBER (int(ENTER))
+def ASK_ENTER():
+	ENTER = raw_input("Enter number from 1 to 3 please\n>")
 	return ENTER
 
 def ENTERINT(ENTER):
 	#print "Estoy en ENTERINT"
 	try:
 		ENTER = int(ENTER)
-		return True
-	except ValueError:
+		CORRECT_NUMBER(ENTER)
 		return False
+	except ValueError:
+		return True
 
 def CORRECT_NUMBER(ENTER):
 	#print "Estoy en CORRECT_NUMBER"
@@ -29,11 +20,14 @@ def CORRECT_NUMBER(ENTER):
 	elif ENTER == 3:
 		print "Selecciono la opcion 3"
 
-def MENUPRI(ENTER):
+def MENUPRI():
 	print "1. -Add an item"
 	print "2. -Sell Articles"
 	print "3. -Exit"
-	VALUE_CHOISE()
-
+	NOT_LETTERS = True
+	while NOT_LETTERS == True:
+		ENTER = ASK_ENTER()
+		NOT_LETTERS = ENTERINT(ENTER)
+		
 if __name__ == "__main__":
-	MENUPRI(ENTER)
+	MENUPRI()
