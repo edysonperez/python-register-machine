@@ -1,3 +1,6 @@
+import os
+import sys
+
 def MENU_PRI():
 	print "1. -Add an item"
 	print "2. -Sell Articles"
@@ -56,7 +59,8 @@ def CORRECT_NUMBER(ENTER):
 		print "Selecciono la opcion 2"
 		return "OPTION_TWO" 	
 	elif ENTER == 3:
-		print "Selecciono la opcion 3"
+		os.system("clear")
+		sys.exit()
 		return "OPTION_THREE"
 	
 
