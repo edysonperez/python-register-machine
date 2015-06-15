@@ -1,33 +1,71 @@
-def ASK_ENTER():
+def MENU_PRI():
+	print "1. -Add an item"
+	print "2. -Sell Articles"
+	print "3. -Exit"	
+	ENTER = RAN()
+	CUTING(ENTER)
+
+def RAN():
+	RANGE = True
+	while RANGE == True:
+		ENTER = VALID_CHOISE()
+		ENTER = ENTER_INT(ENTER)
+		RANGE = VERIFY(ENTER)
+	return ENTER
+
+def CUTING(ENTER):
+	RANGE = True
+	while RANGE == True:
+		MSG = VALID_NUMBER(ENTER)
+		RANGE = CUT(MSG)
+		if RANGE == True:
+			ENTER = RAN()
+
+def VALID_CHOISE():
 	ENTER = raw_input("Enter number from 1 to 3 please\n>")
 	return ENTER
 
-def ENTERINT(ENTER):
-	#print "Estoy en ENTERINT"
+def ENTER_INT(ENTER):
 	try:
 		ENTER = int(ENTER)
-		CORRECT_NUMBER(ENTER)
-		return False
+		return ENTER
 	except ValueError:
-		return True
+		return "INVALID"
+
+def VERIFY(ENTER):
+	if type(ENTER) == int:
+		RANGE = False
+	else:
+		RANGE = True
+	return RANGE
+
+def VALID_NUMBER(ENTER):
+	if ENTER < 1 or ENTER > 3:
+		MSG = "INVALID_RANGE"
+		print MSG
+	else:
+		MSG = CORRECT_NUMBER(ENTER)
+	return MSG
 
 def CORRECT_NUMBER(ENTER):
-	#print "Estoy en CORRECT_NUMBER"
 	if ENTER == 1:
 		print "Selecciono la opcion 1"
+		return "OPTION_ONE"
+		
 	elif ENTER == 2:
-		print "Selecciono la opcion 2" 	
+		print "Selecciono la opcion 2"
+		return "OPTION_TWO" 	
 	elif ENTER == 3:
 		print "Selecciono la opcion 3"
+		return "OPTION_THREE"
+	
 
-def MENUPRI():
-	print "1. -Add an item"
-	print "2. -Sell Articles"
-	print "3. -Exit"
-	NOT_LETTERS = True
-	while NOT_LETTERS == True:
-		ENTER = ASK_ENTER()
-		NOT_LETTERS = ENTERINT(ENTER)
-		
+def CUT(MSG):
+	if MSG == "OPTION_ONE" or MSG == "OPTION_TWO" or MSG == "OPTION_THREE":
+		RANGE = False
+	else:
+		RANGE = True
+	return RANGE
+
 if __name__ == "__main__":
-	MENUPRI()
+	MENU_PRI()
