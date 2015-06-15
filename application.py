@@ -59,9 +59,7 @@ def CORRECT_NUMBER(ENTER):
 		print "Selecciono la opcion 2"
 		return "OPTION_TWO" 	
 	elif ENTER == 3:
-		os.system("clear")
-		print "        \n\n****THANK YOU FOR USING REGISTER MACHINE 3.0****\n\n"
-		sys.exit()
+		EXIT()
 		return "OPTION_THREE"
 	
 
@@ -72,5 +70,12 @@ def CUT(MSG):
 		RANGE = True
 	return RANGE
 
+def CLEAN_SCREEN():	
+	os.system("clear")
+	
+def EXIT():
+	os.system("clear")
+	print "        \n\n****THANK YOU FOR USING REGISTER MACHINE 3.0****\n\n"
+	sys.exit()
 if __name__ == "__main__":
 	MENU_PRI()
