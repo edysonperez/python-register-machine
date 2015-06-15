@@ -60,6 +60,7 @@ def CORRECT_NUMBER(ENTER):
 		return "OPTION_TWO" 	
 	elif ENTER == 3:
 		os.system("clear")
+		print "        \n\n****THANK YOU FOR USING REGISTER MACHINE 3.0****\n\n"
 		sys.exit()
 		return "OPTION_THREE"
 	
