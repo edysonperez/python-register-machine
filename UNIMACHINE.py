@@ -2,11 +2,11 @@ import application
 import unittest
 
 class test_REGISTER_MACHINE(unittest.TestCase):
-	def test_ENTER_INT(self):
-		self.assertEqual(application.ENTER_INT("h"),"INVALID")
+	def test_VERIFY_INTERGER(self):
+		self.assertEqual(application.VERIFY_INTERGER("h"),"INVALID")
 	
 	def test_CORRECT_NUMBER(self):	
-		self.assertEqual(application.CORRECT_NUMBER(1),"OPTION_ONE")
+		self.assertEqual(application.CORRECT_NUMBERcd(1),"OPTION_ONE")
 		self.assertEqual(application.CORRECT_NUMBER(2),"OPTION_TWO")
 		self.assertEqual(application.CORRECT_NUMBER(3),"OPTION_THREE") 
 	
