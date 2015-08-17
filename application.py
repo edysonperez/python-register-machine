@@ -61,7 +61,8 @@ def VALID_NUMBER(ENTER):
 def CORRECT_NUMBER(ENTER):
     if ENTER == 1:
         OPTION_ONE(ENTER)
-        print "OPTION_ONE"
+        ENTER_PRODUCTS(ENTER)
+
     elif ENTER == 2:
         OPTION_TWO(ENTER)
         print "OPTION_TWO"
@@ -84,6 +85,29 @@ def SELECT_CHOISE(MSG):
     else:
         RANGE = True
     return RANGE
+
+def ENTER_PRODUCTS(ENTER):        
+    ITEMS = {}
+    BOX = True
+    while BOX == True:
+        SELECT = raw_input("You wish to enter a product y/n: ")
+        try:
+            if SELECT.isalpha() == True:
+                if SELECT.lower() == "y":
+                    PRODUCT = raw_input("Enter Product: ")
+                    PRICE = int(raw_input("Enter Price: "))
+                    ITEMS[PRODUCT] = PRICE
+                elif SELECT.lower() == "n":
+                    BOX = False
+                else:
+                    print "Unrecognized data"
+            else:
+                print "Non numerical data are recognized"
+        except:
+            BOX = True
+    print "Your items are: "
+    for KEY in ITEMS:
+        print KEY,":",ITEMS[KEY]    
 
 if __name__ == "__main__":
     MAIN_MENU()
