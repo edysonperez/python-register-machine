@@ -60,13 +60,23 @@ def VALID_NUMBER(ENTER):
 
 def CORRECT_NUMBER(ENTER):
     if ENTER == 1:
-        return "OPTION_ONE"
+        OPTION_ONE(ENTER)
+        print "OPTION_ONE"
     elif ENTER == 2:
-        return "OPTION_TWO"
+        OPTION_TWO(ENTER)
+        print "OPTION_TWO"
     elif ENTER == 3:
-        return "OPTION_THREE"
-        EXIT();
-        
+        OPTION_THREE(ENTER)
+        EXIT()
+       
+def OPTION_ONE(ENTER):
+    return "OPTION_ONE"
+
+def OPTION_TWO(ENTER):
+    return "OPTION_TWO"
+
+def OPTION_THREE(ENTER):
+    return "OPTION_THREE"   
 
 def SELECT_CHOISE(MSG):
     if MSG == "OPTION_ONE" or MSG == "OPTION_TWO" or MSG == "OPTION_THREE":
