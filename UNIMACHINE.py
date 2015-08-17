@@ -14,6 +14,7 @@ class test_REGISTER_MACHINE(unittest.TestCase):
 		self.assertEqual(application.VALID_NUMBER(0),"INVALID_RANGE")
 		self.assertEqual(application.VALID_NUMBER(4),"INVALID_RANGE")
 	
+	
 	#def test_CHOISE_ENTER_PRODUCTS(self):
 		#self.assertNotEqual(application.ENTER_PRODUCTS_YES_OR_NOT("y"),"ENTER_PRODUCTS") 
 		#self.assertNotEqual(application.ENTER_PRODUCTS_YES_OR_NOT("n"),"BACK_MENU")
