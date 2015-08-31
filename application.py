@@ -61,7 +61,7 @@ def VALID_NUMBER(ENTER):
 def CORRECT_NUMBER(ENTER):
     if ENTER == 1:
         OPTION_ONE(ENTER)
-        ENTER_PRODUCTS(ENTER)
+        ENTER_ALL_PRODUCTS()
 
     elif ENTER == 2:
         OPTION_TWO(ENTER)
@@ -86,16 +86,17 @@ def SELECT_CHOISE(MSG):
         RANGE = True
     return RANGE
 
-def ENTER_PRODUCTS(ENTER):        
+def ENTER_ALL_PRODUCTS():        
     ITEMS = {}
     BOX = True
     while BOX == True:
-        SELECT = raw_input("You wish to enter a product y/n: ")
+        SELECT = ENTER_PRODUCTS_YES_OR_NOT()
         try:
             if SELECT.isalpha() == True:
                 if SELECT.lower() == "y":
-                    PRODUCT = raw_input("Enter Product: ")
-                    PRICE = int(raw_input("Enter Price: "))
+                    ENTER_PRODUCTS_YES(SELECT)
+                    PRODUCT = ENTER_PRODUCT()
+                    PRICE = ENTER_PRICE()
                     ITEMS[PRODUCT] = PRICE
                 elif SELECT.lower() == "n":
                     BOX = False
@@ -107,7 +108,25 @@ def ENTER_PRODUCTS(ENTER):
             BOX = True
     print "Your items are: "
     for KEY in ITEMS:
-        print KEY,":",ITEMS[KEY]    
+        print KEY,":",ITEMS[KEY]
+
+def ENTER_PRODUCTS_YES(SELECT):
+    return "y"
+
+def ENTER_PRODUCTS_NOT(SELECT):
+    return "n"
+
+def ENTER_PRODUCTS_YES_OR_NOT():
+    SELECT = raw_input("You Wish to enter a product y/n")
+    return SELECT
+
+def ENTER_PRODUCT():
+    PRODUCT = raw_input("Enter Product: ")
+    return PRODUCT
+
+def ENTER_PRICE():
+    PRICE = int(raw_input("Enter Price: "))
+    return PRICE
 
 if __name__ == "__main__":
     MAIN_MENU()
